@@ -1,0 +1,50 @@
+div {
+  position: relative;
+  top: -8px;
+  left: 87px;
+  display: flex;
+}
+p {
+  width: 60px;
+  height: 95px;
+  border: 10px solid #fe5f55;
+  border-bottom: none;
+  position: relative;
+  margin-right: 60px;
+}
+p:before,
+p:after {
+  position: absolute;
+  content: "";
+}
+p:after {
+  width: 50px;
+  height: 40px;
+  background: #fe5f55;
+  bottom: -15px;
+  left: -50px;
+  border-radius: 50%;
+}
+[a]:after {
+  box-shadow: 70px 0 #fe5f55;
+}
+[b],
+[c] {
+  border-bottom: none;
+  border-right: none;
+  width: 30px;
+  position: relative;
+}
+[b] {
+  border-color: #a64942;
+  margin-right: 30px;
+}
+[b]:after {
+  background: #a64942;
+}
+[c]:before {
+  width: 30px;
+  height: 10px;
+  background: #fe5f55;
+  top: 10px;
+}
