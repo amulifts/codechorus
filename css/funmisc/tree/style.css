@@ -1,0 +1,31 @@
+body {
+  background: #e8e8e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div {
+  border: 125px solid transparent;
+  border-bottom-color: #00a79d;
+  border-bottom-width: 100px;
+  position: relative;
+  top: -13px;
+}
+div:after,div:before {
+  border: 125px solid transparent;
+  border-bottom-width: 100px;
+  position: absolute;
+  content: '';
+  left: -125px;
+}
+div:before {
+  border-bottom-color: #f5c181;
+  position: absolute;
+  content: '';
+  top: -175px;
+  left: -125px;
+}
+div:after {
+  border-bottom-color: #ffeecf;
+  top: -225px;
+}

@@ -1,0 +1,51 @@
+body {
+  background: #e8e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper {
+  display: flex;
+  position: relative;
+}
+.s-left {
+  width: 140px;
+  height: 100px;
+  background: #f7ec7d;
+}
+.s-right {
+  width: 60px;
+  height: 100px;
+  background: #e38f66;
+}
+.circle,
+.circle-sm {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e8e8e8;
+  position: absolute;
+}
+.circle-sm {
+  width: 20px;
+  height: 20px;
+  right: 50px;
+}
+.left {
+  left: -20px;
+}
+.top {
+  top: -20px;
+}
+.right {
+  right: -20px;
+}
+.bottom {
+  bottom: -20px;
+}
+.top-sm {
+  top: -10px;
+}
+.bottom-sm {
+  bottom: -10px;
+}

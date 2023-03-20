@@ -1,0 +1,28 @@
+body {
+  background: #293462;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.ice {
+  width: 100px;
+  height: 150px;
+  background: #fff1c1;
+  border-radius: 50px 50px 20px 20px;
+}
+.stick {
+  width: 30px;
+  height: 50px;
+  background: #fe5f55;
+  border-radius: 0 0 10px 10px;
+}
+.stick::after {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 10px;
+  background: #a64942;
+}
