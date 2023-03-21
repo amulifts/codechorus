@@ -1,0 +1,174 @@
+.running {
+  --color: #5D5B5B;
+  --duration: 0.7s;
+}
+.running .outer {
+  animation: outer var(--duration) linear infinite;
+}
+.running .outer .body {
+  background: var(--color);
+  height: 15px;
+  width: 8px;
+  border-radius: 4px;
+  transform-origin: 4px 11px;
+  position: relative;
+  transform: rotate(32deg);
+  animation: body var(--duration) linear infinite;
+}
+.running .outer .body:before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  bottom: 16px;
+  left: 0;
+  position: absolute;
+  background: var(--color);
+}
+.running .outer .body .arm, .running .outer .body .arm:before, .running .outer .body .leg, .running .outer .body .leg:before {
+  content: '';
+  width: var(--w, 11px);
+  height: 4px;
+  top: var(--t, 0);
+  left: var(--l, 2px);
+  border-radius: 2px;
+  transform-origin: 2px 2px;
+  position: absolute;
+  background: var(--c, var(--color));
+  transform: rotate(var(--r, 0deg));
+  animation: var(--name, arm-leg) var(--duration) linear infinite;
+}
+.running .outer .body .arm:before {
+  --l: 7px;
+  --name: arm-b;
+}
+.running .outer .body .arm.front {
+  --r: 24deg;
+  --r-to: 164deg;
+}
+.running .outer .body .arm.front:before {
+  --r: -48deg;
+  --r-to: -36deg;
+}
+.running .outer .body .arm.behind {
+  --r: 164deg;
+  --r-to: 24deg;
+}
+.running .outer .body .arm.behind:before {
+  --r: -36deg;
+  --r-to: -48deg;
+}
+.running .outer .body .leg {
+  --w: 12px;
+  --t: 11px;
+}
+.running .outer .body .leg:before {
+  --t: 0;
+  --l: 8px;
+}
+.running .outer .body .leg.front {
+  --r: 10deg;
+  --r-to: 108deg;
+}
+.running .outer .body .leg.front:before {
+  --r: 18deg;
+  --r-to: 76deg;
+}
+.running .outer .body .leg.behind {
+  --r: 108deg;
+  --r-to: 10deg;
+  --c: none;
+}
+.running .outer .body .leg.behind:before {
+  --c: var(--color);
+  --r: 76deg;
+  --r-to: 18deg;
+}
+.running .outer .body .leg.behind:after {
+  content: '';
+  top: 0;
+  right: 0;
+  height: 4px;
+  width: 6px;
+  clip-path: polygon(2px 0, 6px 0, 6px 4px, 0 4px);
+  border-radius: 0 2px 2px 0;
+  position: absolute;
+  background: var(--color);
+}
+@keyframes outer {
+  50% {
+    transform: translateY(0);
+ }
+  25%, 75% {
+    transform: translateY(4px);
+ }
+}
+@keyframes body {
+  50% {
+    transform: rotate(16deg);
+ }
+  25%, 75% {
+    transform: rotate(24deg);
+ }
+}
+@keyframes arm-leg {
+  50% {
+    transform: rotate(var(--r-to));
+ }
+}
+@keyframes arm-b {
+  30%, 70% {
+    transform: rotate(var(--r-to));
+ }
+}
+.buttons {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 380px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.buttons button {
+  border: 0;
+  background: 0;
+  padding: 8px 16px;
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  color: var(--c, #8a91b4);
+  transition: color 0.3s, transform 0.3s;
+  transform: scale(var(--s, 1));
+}
+.buttons button:hover {
+  --c: #d1d6ee;
+}
+.buttons button:active {
+  --s: 0.9;
+}
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+* {
+  box-sizing: inherit;
+}
+*:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  font-family: 'Roboto', Arial;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #e8e8e8;
+}
+body .running {
+  zoom: 2;
+  margin-top: -32px;
+}

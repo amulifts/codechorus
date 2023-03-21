@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>01 - Running Man</title>
+  </head>
+  <body>
+    <div class="running">
+      <div class="outer">
+        <div class="body">
+          <div class="arm behind"></div>
+          <div class="arm front"></div>
+          <div class="leg behind"></div>
+          <div class="leg front"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button
+        onclick="document.querySelector('.running').style.setProperty('--color', 'rgba(93, 91, 91, .3)')"
+      >
+        opacity .3
+      </button>
+      <button
+        onclick="document.querySelector('.running').style.setProperty('--color', 'rgba(93, 91, 91, 1)')"
+      >
+        opacity 1
+      </button>
+      <button
+        onclick="document.querySelector('.running').style.setProperty('--duration', '.5s')"
+      >
+        duration .5
+      </button>
+      <button
+        onclick="document.querySelector('.running').style.setProperty('--duration', '1s')"
+      >
+        duration 1
+      </button>
+      <button
+        onclick="document.querySelector('.running').style.setProperty('--duration', '.7s')"
+      >
+        duration .7
+      </button>
+    </div>
+  </body>
+</html>
