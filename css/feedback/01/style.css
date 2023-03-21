@@ -42,7 +42,6 @@
   background: var(--sb, var(--normal));
   box-shadow: inset 3px -3px 4px var(--sh, var(--normal-shadow)), inset -1px 1px 2px var(--sht, var(--normal-shadow-top));
   transition: background 0.4s, box-shadow 0.4s, transform 0.3s;
-  -webkit-tap-highlight-color: transparent;
 }
 .feedback label div {
   width: 40px;
