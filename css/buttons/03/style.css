@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+.main-container {
+    height: 100vh;
+    background: #e8e8e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.expandable-button {
+    position: relative;
+    width: 8em;
+    height: 8em;
+    border: 1px solid #101820;
+    border-radius: 50%;
+    background: #101820;
+    transition: 0.15s ease-out;
+    cursor: pointer;
+    box-shadow: 0 10px 50px 5px #101820 22;
+}
+.expandable-button .fill-block {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+.expandable-button .close-icon {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 2em;
+}
+.expandable-button .close-icon .fas {
+    position: absolute;
+    top: 100%;
+    transition: 0.15s;
+}
+.expandable-button:hover {
+    box-shadow: 0 15px 100px 10px #101820 22;
+}
+.expandable-button .expansion-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 1em;
+    width: 1em;
+    background: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    text-decoration: none;
+    color: #101820;
+    transition: 0.25s;
+    box-shadow: 0 5px 80px 5px #101820 44;
+}
+.expandable-button .expansion-item .expansion-content {
+    display: none;
+    transition: 0.15s;
+    animation: fadeOut 0.5s linear forwards;
+}
+.expandable-button .expansion-item:nth-of-type(1) {
+    transform: translateX(calc(-60% + -25px)) translateY(-50%);
+}
+.expandable-button .expansion-item:nth-of-type(2) {
+    transform: translateX(calc(-57% + 0px)) translateY(-50%);
+}
+.expandable-button .expansion-item:nth-of-type(3) {
+    transform: translateX(calc(-54% + 25px)) translateY(-50%);
+}
+.expandable-button.expanded {
+    width: 5em;
+    height: 5em;
+}
+.expandable-button.expanded:hover {
+    box-shadow: 0 10px 50px 5px #101820 22;
+}
+.expandable-button.expanded .close-icon .fas {
+    top: 50%;
+    transform: translateY(-50%);
+    transition-delay: 0.25s;
+}
+.expandable-button.expanded .expansion-item {
+    width: 7em;
+    height: 2em;
+    border-radius: 5em;
+    top: -50%;
+    pointer-events: fill;
+    transform: translateX(-0.7em);
+}
+.expandable-button.expanded .expansion-item:hover {
+    top: -60%;
+}
+.expandable-button.expanded .expansion-item .expansion-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    line-height: 1;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: fadeIn 0.25s linear forwards;
+}
+.expandable-button.expanded .expansion-item:nth-of-type(1) {
+    left: calc(-7.5em - -5%);
+    transition-delay: 0.05s;
+}
+.expandable-button.expanded .expansion-item:nth-of-type(1) .expansion-content {
+    animation-delay: 0.1s;
+}
+.expandable-button.expanded .expansion-item:nth-of-type(2) {
+    left: calc(0em - 0%);
+    transition-delay: 0.1s;
+}
+.expandable-button.expanded .expansion-item:nth-of-type(2) .expansion-content {
+    animation-delay: 0.2s;
+}
+.expandable-button.expanded .expansion-item:nth-of-type(3) {
+    left: calc(7.5em - 5%);
+    transition-delay: 0.15s;
+}
+.expandable-button.expanded .expansion-item:nth-of-type(3) .expansion-content {
+    animation-delay: 0.3s;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+   }
+    100% {
+        opacity: 1;
+   }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+   }
+    100% {
+        opacity: 0;
+   }
+}

@@ -1,0 +1,59 @@
+body {
+	font-family: Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	background: #e8e8e8;
+}
+
+.options {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+label {
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #222;
+	border: 2px solid #222;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s, border-color 0.3s, color 0.3s,
+		box-shadow 0.3s;
+}
+
+input[type="radio"]:checked + label {
+	color: var(--color);
+	border-color: currentColor;
+	box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+}
+
+label:hover,
+input[type="radio"]:checked + label:hover {
+	color: var(--color);
+	border-color: currentColor;
+	box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor,
+		0 0 40px currentColor, 0 0 50px currentColor;
+}
+
+label:hover {
+	color: var(--color);
+	border-color: currentColor;
+	box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+}
+
+canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
