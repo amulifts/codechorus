@@ -4,36 +4,50 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>02 - Button</title>
     <!-- Link of font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-    <!-- Link to google fonts Popins -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <!-- Link to google fonts Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <ul class="wrapper">
-      <li class="icon facebook">
-        <span class="tooltip">Facebook</span>
-        <span><i class="fab fa-facebook-f"></i></span>
-      </li>
-      <li class="icon twitter">
-        <span class="tooltip">Twitter</span>
-        <span><i class="fab fa-twitter"></i></span>
-      </li>
-      <li class="icon instagram">
-        <span class="tooltip">Instagram</span>
-        <span><i class="fab fa-instagram"></i></span>
-      </li>
-      <li class="icon github">
-        <span class="tooltip">Github</span>
-        <span><i class="fab fa-github"></i></span>
-      </li>
-      <li class="icon youtube">
-        <span class="tooltip">Youtube</span>
-        <span><i class="fab fa-youtube"></i></span>
-      </li>
-    </ul>
+    <div class="main-container">
+      <div class="btn-container">
+        <div class="expandable-button">
+          <div class="fill-block"></div>
+          <div class="close-icon">
+            <div class="fas fa-times"></div>
+          </div>
+          <a class="expansion-item" href="https://instagram.com/codechorus">
+            <div class="expansion-content">
+              <div class="icon fab fa-instagram"></div>
+              <div class="text">Insta</div>
+            </div></a
+          ><a class="expansion-item" href="https://tiktok.com/@codechorus">
+            <div class="expansion-content">
+              <div class="icon fab fa-tiktok"></div>
+              <div class="text">Tiktok</div>
+            </div></a
+          ><a class="expansion-item" href="https://youtube.com/@codechorus">
+            <div class="expansion-content">
+              <div class="icon fas fa-play"></div>
+              <div class="text">Youtube</div>
+            </div></a
+          >
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -6,48 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>03 - Button</title>
-    <!-- Link of font awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-    />
-    <!-- Link to google fonts Roboto -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
-    <div class="main-container">
-      <div class="btn-container">
-        <div class="expandable-button">
-          <div class="fill-block"></div>
-          <div class="close-icon">
-            <div class="fas fa-times"></div>
-          </div>
-          <a class="expansion-item" href="https://instagram.com/codechorus">
-            <div class="expansion-content">
-              <div class="icon fab fa-instagram"></div>
-              <div class="text">Insta</div>
-            </div></a
-          ><a class="expansion-item" href="https://tiktok.com/@codechorus">
-            <div class="expansion-content">
-              <div class="icon fab fa-tiktok"></div>
-              <div class="text">Tiktok</div>
-            </div></a
-          ><a class="expansion-item" href="https://youtube.com/@codechorus">
-            <div class="expansion-content">
-              <div class="icon fas fa-play"></div>
-              <div class="text">Youtube</div>
-            </div></a
-          >
-        </div>
-      </div>
+    <div class="options">
+      <input type="radio" name="option" id="red" />
+      <label for="red" style="--color: red">Red</label>
+
+      <input type="radio" name="option" id="yellow" />
+      <label for="yellow" style="--color: yellow">Yellow</label>
+
+      <input type="radio" name="option" id="pink" />
+      <label for="pink" style="--color: pink">Pink</label>
+
+      <input type="radio" name="option" id="green" />
+      <label for="green" style="--color: green">Green</label>
+
+      <input type="radio" name="option" id="orange" />
+      <label for="orange" style="--color: orange">Orange</label>
+
+      <input type="radio" name="option" id="purple" />
+      <label for="purple" style="--color: purple">Purple</label>
+
+      <input type="radio" name="option" id="blue" />
+      <label for="blue" style="--color: blue">Blue</label>
     </div>
-    <script src="script.js"></script>
+
+    <canvas id="particles"></canvas>
   </body>
 </html>
