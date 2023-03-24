@@ -1,0 +1,23 @@
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #e8e8e8;
+  color: #212121;
+  font: 1em/1.5 sans-serif;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.tally {
+  width: 10em;
+  height: 10em;
+}
+.tally__line,
+.tally__path {
+  stroke: currentColor;
+}
