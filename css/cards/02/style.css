@@ -92,11 +92,8 @@ body .options .option.active {
   margin: 0px;
   border-radius: 40px;
   background-size: auto 100%;
- /*&:active {
-    transform:scale(0.9);
- }
- */
 }
+
 body .options .option.active .shadow {
   box-shadow: inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black;
 }
