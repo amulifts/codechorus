@@ -1,0 +1,66 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98vh;
+}
+
+.btn-container {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+
+.svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+}
+
+.btn {
+  background-color: rgb(66, 125, 194);
+  z-index: 10;
+  color: white;
+  padding: 0.5rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.btn-container:hover {
+  box-shadow: rgba(66, 125, 194, 0.8) 0px 0px 54px;
+}
+
+.btn:hover {
+  outline: rgb(66, 125, 194) solid 2px;
+  background-color: #212121;
+}
+
+.btn-container:hover > .svg-1 {
+  transform: translate(130%, 50%);
+}
+
+.btn-container:hover > .svg-2 {
+  transform: translate(-120%, -150%) rotate(30deg);
+}
+
+.btn-container:hover > .svg-3 {
+  transform: translate(60%, -150%) rotate(-45deg);
+}
+
+.btn-container:hover > .svg-4 {
+  transform: translate(-280%, 0%) rotate(30deg);
+}
+
+.btn-container:hover > .svg-5 {
+  transform: translate(-80%, 60%) rotate(-45deg);
+}
+
+.btn:active {
+  transform: scale(1.05);
+}
