@@ -1,111 +1,121 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 98vh;
-}
-
-.option-input {
-  appearance: none;
-  position: relative;
-  top: 13.33333px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 40px;
-  width: 40px;
-  transition: all 0.15s ease-out 0s;
-  border: none;
+.container input[type="radio"] {
+  position: absolute;
+  opacity: 0;
   cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container {
   display: inline-block;
-  margin-right: 0.5rem;
-  outline: none;
-  z-index: 1000;
-}
-
-.option-input:hover {
-  background: #fa9115;
-}
-
-.option-input:checked {
-  background: #faa91b;
-}
-
-.option-input:checked::before {
-  width: 80px;
-  height: 80px;
-  display: flex;
-  font-weight: bold;
-  position: absolute;
-  align-items: center;
-  justify-content: center;
-}
-
-.option-input:checked::after {
-  animation: click-wave 0.65s;
-  content: "";
-  display: block;
   position: relative;
-  z-index: 100;
+  cursor: pointer;
+  font-size: 17px;
+  width: 5em;
+  height: 2.5em;
+  user-select: none;
+  border: none;
 }
 
-.option-input.radio {
-  border-radius: 50%;
-}
-
-.option-input.radio::after {
-  border-radius: 50%;
-}
-
-@keyframes click-wave {
-  0% {
-    height: 40px;
-    width: 40px;
-    opacity: 0.35;
-    position: relative;
-  }
-
-  100% {
-    height: 200px;
-    width: 200px;
-    margin-left: -80px;
-    margin-top: -80px;
-    opacity: 0;
-  }
-}
-
-.circlegg {
-  position: relative;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background: linear-gradient(45deg, transparent, transparent 40%, yellow),
-    linear-gradient(#040404, #0b0707);
-  animation: rotate 1.5s linear infinite;
-}
-
-.circlegg:before,
-.circlegg:after {
-  content: " ";
+.selected {
   position: absolute;
-  inset: 4px;
-  background: linear-gradient(#181818, #1f1c1c);
-  border-radius: inherit;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.circlegg:before {
-  background: linear-gradient(
-    45deg,
-    transparent,
-    transparent 40%,
-    rgb(206, 91, 49)
-  );
-  filter: blur(25px);
+#leftradio {
+  border-bottom-left-radius: 2.5em;
+  border-top-left-radius: 2.5em;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border: 3px solid #78cce2;
+  background-color: transparent;
+  transition: 0.2s ease-in;
 }
 
-@keyframes rotate {
-  100% {
-    transform: rotate(360deg);
-    filter: hue-rotate(360deg);
-  }
+#rightradio {
+  border-bottom-right-radius: 2.5em;
+  border-top-right-radius: 2.5em;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border: 3px solid #defe47;
+  background-color: transparent;
+  transition: 0.2s linear;
+}
+
+#middleradio {
+  border: 3px solid #f887ff;
+  background-color: transparent;
+  transition: 0.2s linear;
+}
+
+.selected:after {
+  content: '';
+  position: absolute;
+  background-color: 78cce2;
+  width: 100%;
+  height: 90%;
+  transform: scale(0);
+  transition: 0.2s ease-out;
+}
+
+#leftradio:hover {
+  border-bottom-left-radius: 2.5em;
+  border-top-left-radius: 2.5em;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border: 3px solid #78cce2;
+  background-color: #78cce2;
+}
+
+#leftradio::after {
+  top: 0%;
+  height: 100%;
+  border-bottom-left-radius: 2.5em;
+  border-top-left-radius: 2.5em;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border: none;
+  background-color: #78cce2;
+  box-shadow: 0em 0em 4em 0.1em #78cce2;
+}
+
+#rightradio:hover {
+  border-bottom-right-radius: 2.5em;
+  border-top-right-radius: 2.5em;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border: 3px solid #defe47;
+  background-color: #defe47;
+}
+
+#rightradio::after {
+  left: -3%;
+  top: -1%;
+  border-bottom-right-radius: 2.5em;
+  border-top-right-radius: 2.5em;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border: 3px solid #defe47;
+  background-color: #defe47;
+  box-shadow: 0em 0em 4em 0.1em #defe47;
+}
+
+#middleradio:hover {
+  border: 3px solid #f887ff;
+  background-color: #f887ff;
+}
+
+#middleradio::after {
+  left: -3%;
+  top: -3%;
+  border: 3px solid #f887ff;
+  background-color: #f887ff;
+  box-shadow: 0em 0em 4em 0.1em #f887ff;
+}
+
+.container input[type="radio"]:checked ~ .selected:after {
+  transform: scale(1);
 }
