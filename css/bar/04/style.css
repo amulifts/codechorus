@@ -1,0 +1,48 @@
+.container {
+  position: relative;
+  width: 250px;
+  /*  choose your size */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.container button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: #313638;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.icon {
+  width: 26px;
+  height: 26px;
+  fill: #fff;
+}
+
+.container button:nth-child(1):hover {
+  background-color: #2753a7;
+}
+
+.container button:nth-child(2):hover {
+  background-color: #cd242b;
+}
+
+.container button:nth-child(3):hover {
+  background-color: #55acee;
+}
+
+.container button:nth-child(4):hover {
+  background-color: #0274b3;
+}
+
+.title {
+  color: gray;
+  font-weight: 700;
+  font-size: 17px;
+  position: absolute;
+  top: -35px;
+  left: 0;
+}
