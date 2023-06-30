@@ -1,8 +1,16 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 98vh;
+}
+
 .content i {
   margin-bottom: 41px;
 }
 
 .container {
+  width: 500px;
   border-radius: 1px;
   padding: 50px 40px 20px 40px;
   box-sizing: border-box;

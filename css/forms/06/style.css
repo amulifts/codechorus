@@ -1,4 +1,13 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 98vh;
+}
+
 .form {
+  width: 300px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   gap: 10px;
