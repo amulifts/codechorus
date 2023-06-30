@@ -1,3 +1,10 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 98vh;
+}
+
 button {
   padding: 1.3em 3em;
   font-size: 12px;

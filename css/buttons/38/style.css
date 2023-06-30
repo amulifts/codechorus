@@ -1,3 +1,10 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 98vh;
+}
+
 .con-like {
   --red: rgb(255, 50, 100);
   position: relative;
